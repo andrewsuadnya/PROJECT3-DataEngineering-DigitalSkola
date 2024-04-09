@@ -1,6 +1,7 @@
 import os
 import json
 import psycopg2
+from sqlalchemy import create_engine
 
 
 def config(connection_db):
@@ -19,8 +20,9 @@ def get_conn(conf, name_conn):
             password=conf['password'],
             port=conf['port']
         )
-        print(f'[INFO] success connect to postgres {name_conn}')
-        engine = create_engine
-
+        print(f'[INFO] success connect to postgress {name_conn}')
+        engine = create_engine(f'postgresql+psycopg2://{conf["user"]}:{conf["password"]}@{conf["host"]}:{conf["port"]}/{conf["db"]}')
+        return conn, engine
     except Exception as e:
-        print(e)
+        print(f"[INFO] can't connect to postgress {name_conn}")
+        print(str(e))
