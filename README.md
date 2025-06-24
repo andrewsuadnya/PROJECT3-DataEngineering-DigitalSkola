@@ -1,4 +1,4 @@
-# Project-3-SIB: Batch Data Processing with PostgreSQL
+# Batch Data Processing with PostgreSQL
 
 ## 📌 Project Overview
 
