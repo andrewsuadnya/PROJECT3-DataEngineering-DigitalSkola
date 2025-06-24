@@ -103,11 +103,9 @@ The `dim_orders` table in the data warehouse includes:
 
 * Sample data and schema are available in the shared Google Drive folder (see project brief).
 * Make sure both source and DWH databases are accessible.
-* This project is evaluated based on successful execution and GitHub commit history.
 
 ---
 
 ## 📌 Reference
 
-* [Project Brief (PDF)](./Tugas%20Project%203.pdf)
-* [DigitalSkola SIB Batch 6](https://digitalskola.com)
+* [Project Brief (PDF)](https://drive.google.com/file/d/1SCh9ibnV4kWEowqClRUIZeVCnHtJo2bS/view?usp=sharing)
