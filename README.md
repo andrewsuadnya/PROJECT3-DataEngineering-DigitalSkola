@@ -6,6 +6,8 @@ This project is part of the DigitalSkola SIB Batch 6 program, focusing on batch 
 
 The final data warehouse table (`dim_orders`) will be used by data analysts to create dashboards without impacting the production system.
 
+![Screenshot 2024-04-09 202742](https://github.com/user-attachments/assets/aa6b8a2b-69fb-40e0-9785-0e3dcc4dece8)
+
 ---
 
 ## 🧠 Learning Objectives
