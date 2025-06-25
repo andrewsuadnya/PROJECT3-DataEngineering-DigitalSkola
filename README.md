@@ -1,12 +1,24 @@
 # Batch ETL to PostgreSQL Data Warehouse
 
 ## 📄 Project Summary
+![Session 15 - Project 3](https://github.com/user-attachments/assets/95273333-2b15-44f8-ad49-a0176f179088)
+
 The data analyst team requires a table to support dashboard development related to order details from the `marketplace` production database. As a data engineer, you are tasked with creating a data migration script to transfer data from the source tables to the data warehouse. This will allow the analyst team to use the data warehouse tables for their reporting needs without placing additional load on the `marketplace` production database.
 
 The data analyst team has also provided the required columns for the table. The target schema needed by the team is as follows:
-
-![Session 15 - Project 3](https://github.com/user-attachments/assets/95273333-2b15-44f8-ad49-a0176f179088)
-
+```sql
+order_id INT NOT NULL,
+order_date DATE NOT NULL,
+user_id INT NOT NULL,
+payment_name VARCHAR(255),
+shipper_name VARCHAR(255),
+order_price INT,
+order_discount INT,
+voucher_name VARCHAR(255),
+voucher_price INT,
+order_total INT,
+rating_status VARCHAR(255)
+```
 ---
 <br>
 
