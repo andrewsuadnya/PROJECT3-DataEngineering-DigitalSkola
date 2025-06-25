@@ -1,61 +1,58 @@
-# ETL Order Data to PostgreSQL Data Warehouse
+# Batch ETL to PostgreSQL Data Warehouse
 
-## 📌 Project Overview
+## 📄 Project Summary
 
-This project is part of the DigitalSkola SIB Batch 6 program, focusing on batch processing and foundational data engineering tasks. The goal is to implement a simple ETL pipeline using Python to migrate order data from a production PostgreSQL database into a data warehouse (DWH) for analytical use.
+This project implements a batch ETL (Extract, Transform, Load) pipeline to migrate transactional order data from a PostgreSQL production database into a PostgreSQL-based data warehouse. The output of this pipeline is a cleaned and structured table, `dim_orders`, that serves as a basis for business reporting and dashboarding.
 
-The final data warehouse table (`dim_orders`) will be used by data analysts to create dashboards without impacting the production system.
+The project is part of the DigitalSkola SIB Batch 6 program and aims to build foundational skills in data engineering and batch data processing.
 
 ![Screenshot 2024-04-09 202742](https://github.com/user-attachments/assets/aa6b8a2b-69fb-40e0-9785-0e3dcc4dece8)
 
 ---
 
-## 🧠 Learning Objectives
+## 🎯 Objectives
 
-* Understand and apply the ETL (Extract, Transform, Load) process.
-* Strengthen skills in:
-
-  * Python programming
-  * SQL and schema design
-  * PostgreSQL
-  * Git & GitHub
-  * Docker (optional for DB setup)
+* Develop a functional ETL pipeline using Python.
+* Integrate with PostgreSQL databases for source and target storage.
+* Normalize and transform raw transactional order data into a clean dimensional table.
+* Enable data analysts to run dashboard queries without impacting production systems.
 
 ---
 
-## 🛠️ Tech Stack & Tools
+## 🧱 Output Table: `dim_orders`
+
+| Column Name     | Data Type    | Description                  |
+| --------------- | ------------ | ---------------------------- |
+| order\_id       | INT          | Unique order identifier      |
+| order\_date     | DATE         | Date when the order was made |
+| user\_id        | INT          | User who placed the order    |
+| payment\_name   | VARCHAR(255) | Payment method used          |
+| shipper\_name   | VARCHAR(255) | Delivery service             |
+| order\_price    | INT          | Total price before discounts |
+| order\_discount | INT          | Discount applied             |
+| voucher\_name   | VARCHAR(255) | Voucher code used (if any)   |
+| voucher\_price  | INT          | Voucher discount amount      |
+| order\_total    | INT          | Final amount paid            |
+| rating\_status  | VARCHAR(255) | Post-order user rating       |
+
+---
+
+## 🛠️ Technologies Used
 
 * **Language**: Python 3.7+
-* **Database**: PostgreSQL
+* **Databases**: PostgreSQL (source and target)
 * **Libraries**:
 
-  * `psycopg2-binary==2.9.3`
-  * `SQLAlchemy==1.4.40`
-  * `sqlparse==0.4.2`
-  * `pandas==1.4.3`
-* **SQL GUI**: DBeaver / PgAdmin
-* **IDE**: VSCode / PyCharm
-* **Version Control**: Git + GitHub
+  * `psycopg2-binary` for database connectivity
+  * `SQLAlchemy` for ORM and queries
+  * `sqlparse` for query formatting
+  * `pandas` for data transformation
+* **Environment**:
 
----
-
-## 🗃️ Schema Overview
-
-The `dim_orders` table in the data warehouse includes:
-
-| Column Name     | Data Type    |
-| --------------- | ------------ |
-| order\_id       | INT          |
-| order\_date     | DATE         |
-| user\_id        | INT          |
-| payment\_name   | VARCHAR(255) |
-| shipper\_name   | VARCHAR(255) |
-| order\_price    | INT          |
-| order\_discount | INT          |
-| voucher\_name   | VARCHAR(255) |
-| voucher\_price  | INT          |
-| order\_total    | INT          |
-| rating\_status  | VARCHAR(255) |
+  * Docker (optional, for setting up Postgres)
+  * DBeaver / PgAdmin (for database visualization)
+  * VSCode / PyCharm (IDE)
+  * Git & GitHub (version control)
 
 ---
 
@@ -74,40 +71,24 @@ The `dim_orders` table in the data warehouse includes:
 
 ---
 
-## 🚀 How to Run
+## 🔄 Execution Flow
 
-1. Clone the repository:
-
-   ```bash
-   git clone <your-repo-url>
-   cd <project-directory>
-   ```
-
-2. Set up PostgreSQL databases (source & warehouse) manually or using Docker.
-
-3. Update DB credentials in `connection.py`.
-
-4. Install required packages:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-5. Run the ETL process:
-
-   ```bash
-   python main.py
-   ```
+1. Define PostgreSQL database credentials in `connection.py`.
+2. Create schema and sample data in source DB.
+3. Use `main.py` to extract data from source DB, apply transformations, and load to data warehouse.
+4. Final table `dim_orders` is used for reporting purposes.
 
 ---
 
-## 📝 Notes
+## ✅ Key Results
 
-* Sample data and schema are available in the shared Google Drive folder (see project brief).
-* Make sure both source and DWH databases are accessible.
+* Successfully migrated transactional data into structured DWH format.
+* ETL process runs without errors.
+* Data is clean, complete, and queryable for analytics use cases.
 
 ---
 
-## 📌 Reference
+## 📌 References
 
-* [Project Brief (PDF)](https://drive.google.com/file/d/1SCh9ibnV4kWEowqClRUIZeVCnHtJo2bS/view?usp=sharing)
+* [Project Brief PDF](https://drive.google.com/file/d/1SCh9ibnV4kWEowqClRUIZeVCnHtJo2bS/view?usp=sharing)
+* DigitalSkola SIB Batch 6 Materials
