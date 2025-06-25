@@ -1,10 +1,18 @@
 # Batch ETL to PostgreSQL Data Warehouse
 
 ## 📄 Project Summary
+The data analyst team requires a table to support dashboard development related to order details from the `marketplace` production database. As a data engineer, you are tasked with creating a data migration script to transfer data from the source tables to the data warehouse. This will allow the analyst team to use the data warehouse tables for their reporting needs without placing additional load on the `marketplace` production database.
+
+The data analyst team has also provided the required columns for the table. The target schema needed by the team is as follows:
+
+![Session 15 - Project 3](https://github.com/user-attachments/assets/95273333-2b15-44f8-ad49-a0176f179088)
+
+---
+<br>
+
+![Blank diagram - Page 1](https://github.com/user-attachments/assets/6d18febb-7266-448d-a6c4-0daf4a9ec810)
 
 This project implements a batch ETL (Extract, Transform, Load) pipeline to migrate transactional order data from a PostgreSQL production database into a PostgreSQL-based data warehouse. The output of this pipeline is a cleaned and structured table, `dim_orders`, that serves as a basis for business reporting and dashboarding.
-
-
 
 ---
 
