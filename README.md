@@ -4,8 +4,6 @@
 
 This project implements a batch ETL (Extract, Transform, Load) pipeline to migrate transactional order data from a PostgreSQL production database into a PostgreSQL-based data warehouse. The output of this pipeline is a cleaned and structured table, `dim_orders`, that serves as a basis for business reporting and dashboarding.
 
-The project is part of the DigitalSkola SIB Batch 6 program and aims to build foundational skills in data engineering and batch data processing.
-
 ![Screenshot 2024-04-09 202742](https://github.com/user-attachments/assets/aa6b8a2b-69fb-40e0-9785-0e3dcc4dece8)
 
 ---
@@ -91,4 +89,3 @@ The project is part of the DigitalSkola SIB Batch 6 program and aims to build fo
 ## 📌 References
 
 * [Project Brief PDF](https://drive.google.com/file/d/1SCh9ibnV4kWEowqClRUIZeVCnHtJo2bS/view?usp=sharing)
-* DigitalSkola SIB Batch 6 Materials
