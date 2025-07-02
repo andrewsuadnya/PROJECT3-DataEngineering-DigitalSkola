@@ -1,4 +1,4 @@
-# Batch ETL to PostgreSQL Data Warehouse
+# 📦 Batch ETL for Order Data to PostgreSQL Warehouse
 
 ## 📄 Project Summary
 ![Session 15 - Project 3](https://github.com/user-attachments/assets/95273333-2b15-44f8-ad49-a0176f179088)
